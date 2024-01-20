@@ -24,4 +24,4 @@ def home (request): #  we will handle the request argument later
     return render(request, 'blog/home.html', context)
 
 def about (request): #  we will handle the request argument later
-    return render(request, 'blog/about.html', {'title': 'About'} ) 
+    return render(request , 'blog/about.html', {'title': 'About'} ) 

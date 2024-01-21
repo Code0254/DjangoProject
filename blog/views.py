@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import Post # imports the database into the view
 
+'''
+# Dummy Data
 posts =[
     {
         'author' : 'Brian K',
@@ -15,11 +18,12 @@ posts =[
         'date_posted' : '09 February 2024'
     }
 ]
+'''
 # Create your views here.
 
 def home (request): #  we will handle the request argument later
     context= {
-        'posts': posts
+        'posts': Post.objects.all() # updated from 'posts': posts
     }
     return render(request, 'blog/home.html', context)
 

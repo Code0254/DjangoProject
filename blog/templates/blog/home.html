@@ -5,7 +5,8 @@
             <div class="media-body">
             <div class="article-metadata">
                 <a class="mr-2" href="#">{{ post.author }}</a>
-                <small class="text-muted">{{ post.date_posted }}</small>
+                <!-- Django Date Filters: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbWxkbGtrMnlQN0R1N3QyZlVWbVNOSTBUN0ltUXxBQ3Jtc0tsRUdVX0lBMzd2bUlqX0xMdnBHeDVWeV9CMFFtOGZOV2Z0UDJsczVHUnAzX3pMVTF6VmpBS1lLRnhtaTFjblRDcW1GRWxzU1RHRHRuN3lYOHV1ZnIyeGotT2xmSGlZajBwX01IOGdMUWJDT1hyZUpiaw&q=https%3A%2F%2Fdocs.djangoproject.com%2Fen%2F2.0%2Fref%2Ftemplates%2Fbuiltins%2F%23date&v=aHC3uTkT9r8 -->
+                <small class="text-muted">{{ post.date_posted |date:"F d, Y"}}</small> 
             </div>
             <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
